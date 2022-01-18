@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="main.css">
+
+    <title>Slider</title>
+  </head>
+  <body>
+      <div class="container">
+          <div class="slider-container">
+              <div class="arrow-container">
+                  <div class="arrow arrow-left"> < </div>
+                  <div class="arrow arrow-right"> > </div>
+              </div>
+              <div class="button-container">
+                  <input type="radio" name="btn-slider" checked data-index="0">
+                  <input type="radio" name="btn-slider" data-index="1">
+                  <input type="radio" name="btn-slider" data-index="2">
+                  <input type="radio" name="btn-slider" data-index="3">
+              </div>
+              <div class="img-container">
+                  <img src="img/1.jpg" style="--i:0" class="active">
+                  <img src="img/2.jpg" style="--i:1">
+                  <img src="img/3.jpg" style="--i:2">
+                  <img src="img/4.jpg" style="--i:3">
+              </div>
+          </div>
+      </div>
+
+
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="main.js"></script>
+  </body>
+</html>

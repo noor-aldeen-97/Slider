@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.slider-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.arrow-container{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.arrow-container .arrow{
+    font-size: 48px;
+    font-weight: 600;
+    color: #f0f0f0;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.arrow-container .arrow:hover{
+    color: #d0d0d0;
+}
+
+.arrow-container .arrow-left{
+    float: left;
+}
+
+.arrow-container .arrow-right{
+    float: right;
+}
+
+.arrow-container .arrow-left::after,.arrow-container .arrow-right::after{
+    content: '';
+    clear: both;
+}
+
+.button-container{
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: auto;
+    height: auto;
+    z-index: 2;
+}
+
+.button-container input[type=radio]{
+    display: inline-block;
+    background-color: transparent;
+    appearance: none;
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin-right: 5px;
+}
+
+.button-container input[type=radio]:last-of-type{
+    margin-right: 0px;
+}
+
+.button-container input[type=radio]:checked{
+    background-color: #444;
+}
+
+.img-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.img-container img{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.img-container img.active{
+    /*margin-left:   calc(var(--i) * -100%);*/
+    opacity: 1;
+}
